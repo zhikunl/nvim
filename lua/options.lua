@@ -41,14 +41,12 @@ opt.statusline = table.concat({
     " %P",
 })
 
-vim.filetype.add({
-    extension = {
-        cpp = "cpp",
-        cc = "cpp",
-        cxx = "cpp",
-        hpp = "cpp",
-        cu = "cuda",
-        cuh = "cuda",
-    },
-})
+-- Neovim 0.6.1 设置文件类型（替代 vim.filetype.add）
+vim.cmd([[
+autocmd BufRead,BufNewFile *.cc set filetype=cpp
+autocmd BufRead,BufNewFile *.cxx set filetype=cpp
+autocmd BufRead,BufNewFile *.hpp set filetype=cpp
+autocmd BufRead,BufNewFile *.cu set filetype=cuda
+autocmd BufRead,BufNewFile *.cuh set filetype=cuda
+]])
 
