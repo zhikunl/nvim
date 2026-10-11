@@ -100,8 +100,8 @@ cmp.setup({
 
 vim.opt.completeopt = { "menuone", "noinsert", "noselect" }
 
--- 补全菜单最多显示 12 行
-vim.opt.pumheight = 12
+-- 补全菜单最多显示 20 行
+vim.opt.pumheight = 20
 
 -- =========================================
 -- nvim-cmp completion colors
@@ -113,57 +113,51 @@ local function set_cmp_highlights()
     vim.api.nvim_set_hl(0, "Pmenu", {
         fg = "#d0d0d0",
         bg = "#303030",
+        default = false,
     })
-
     -- 选中项
     vim.api.nvim_set_hl(0, "PmenuSel", {
         fg = "#ffffff",
         bg = "#005f87",
         bold = true,
+        default = false,
     })
-
     -- 匹配字符
     vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", {
         fg = "#ffd75f",
         bold = true,
+        default = false,
     })
-
     vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", {
         fg = "#ffd75f",
         bold = true,
+        default = false,
     })
-
-    -- 选中项的匹配字符
-    vim.api.nvim_set_hl(0, "CmpItemAbbrMatchSel", {
-        fg = "#ffd75f",
-        bg = "#005f87",
-        bold = true,
-    })
-
     -- 右侧菜单说明
     vim.api.nvim_set_hl(0, "CmpItemMenu", {
         fg = "#d0d0d0",
         bg = "#303030",
+        default = false,
     })
-
     -- 右侧类型说明
     vim.api.nvim_set_hl(0, "CmpItemKind", {
         fg = "#8be9fd",
         bg = "#303030",
+        default = false,
     })
-
     -- 滚动条
     vim.api.nvim_set_hl(0, "PmenuSbar", {
         bg = "#303030",
+        default = false,
     })
-
     vim.api.nvim_set_hl(0, "PmenuThumb", {
         bg = "#005f87",
+        default = false,
     })
 end
 
 set_cmp_highlights()
-
 vim.api.nvim_create_autocmd("ColorScheme", {
     callback = set_cmp_highlights,
 })
+

@@ -10,7 +10,7 @@ opt.softtabstop = 4
 
 opt.smartindent = true
 opt.wrap = false
--- opt.termguicolors = true
+opt.termguicolors = true
 
 opt.mouse = "a"
 opt.clipboard = "unnamedplus"
@@ -20,7 +20,6 @@ opt.smartcase = true
 
 opt.updatetime = 250
 opt.signcolumn = "yes"
-opt.completeopt = { "menu", "menuone", "noselect" }
 
 opt.splitright = true
 opt.splitbelow = true
